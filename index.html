@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Lasr Name</th>
+            <th>Full Name</th>
+        </tr>
+        {% for i in range (1, 4)}
+        <tr>
+            {% for j in range (3): %}
+            {% if j==0 : %}
+            <td>{{students_name}}</td>
+            {% endif %}
+            {% if j==1 : %}
+            <td>{{students_lname}}</td>
+            {% endif %}
+            {% if j==2 : %}
+            <td>{{students_full}}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
+<!--     <h1>Random Numbers</h1>
+    {% for number in random_numbers %}
+        <p>{{ number }}</p>
+    {% endfor %}
+    <h1>Students</h1>
+    {% for student in students %}
+        <p>{{ student['name'] }} - {{ student['age'] }}</p>
+    {% endfor %} 
+ -->
